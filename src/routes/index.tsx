@@ -54,15 +54,15 @@ function LoginPage() {
   }
 
   if (!ready) return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0a1628' }}>
-      <div style={{ color: '#4a6080' }}>Memuat...</div>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#050914' }}>
+      <div style={{ color: '#5d7e98' }}>Memuat...</div>
     </div>
   )
 
   return (
     <div style={{
       minHeight: '100vh',
-      background: '#0a1628',
+      background: 'linear-gradient(135deg, rgba(50,255,211,0.08), transparent 36%), linear-gradient(315deg, rgba(0,184,255,0.12), transparent 40%), #050914',
       display: 'flex',
       position: 'relative',
       overflow: 'hidden',
@@ -70,12 +70,12 @@ function LoginPage() {
       {/* Background glow effects */}
       <div style={{
         position: 'absolute', top: '-20%', left: '-10%', width: 600, height: 600,
-        background: 'radial-gradient(circle, rgba(21, 101, 192, 0.15) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(0, 184, 255, 0.18) 0%, transparent 70%)',
         borderRadius: '50%', pointerEvents: 'none',
       }} />
       <div style={{
         position: 'absolute', bottom: '-20%', right: '-10%', width: 500, height: 500,
-        background: 'radial-gradient(circle, rgba(0, 191, 165, 0.1) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(50, 255, 211, 0.14) 0%, transparent 70%)',
         borderRadius: '50%', pointerEvents: 'none',
       }} />
 
@@ -92,25 +92,26 @@ function LoginPage() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 60 }}>
           <div style={{
             width: 48, height: 48,
-            background: 'linear-gradient(135deg, #00BFA5, #1565C0)',
+            background: 'linear-gradient(135deg, #32ffd3, #00b8ff 62%, #7c5cff)',
             borderRadius: 14,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
+            boxShadow: '0 0 28px rgba(50, 255, 211, 0.22)',
           }}>
-            <Landmark size={26} color="white" />
+            <Landmark size={26} color="#03101b" />
           </div>
           <div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#e2e8f0', letterSpacing: '-0.5px' }}>
-              SIDIK<span style={{ color: '#00BFA5' }}>Bank</span>
+            <div style={{ fontFamily: 'Rajdhani, Manrope, sans-serif', fontSize: '1.68rem', fontWeight: 700, color: '#e8fff9' }}>
+              SIDIK<span style={{ color: '#32ffd3' }}>Bank</span>
             </div>
-            <div style={{ fontSize: '0.7rem', color: '#4a6080', letterSpacing: '1px' }}>DIGITAL BANKING</div>
+            <div style={{ fontSize: '0.7rem', color: '#5d7e98', letterSpacing: '1px' }}>DIGITAL BANKING</div>
           </div>
         </div>
 
-        <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#e2e8f0', lineHeight: 1.2, marginBottom: 20, letterSpacing: '-1px' }}>
+        <h1 style={{ fontFamily: 'Rajdhani, Manrope, sans-serif', fontSize: '3.1rem', fontWeight: 700, color: '#e8fff9', lineHeight: 1.05, marginBottom: 20 }}>
           Perbankan Digital<br />
-          <span style={{ color: '#00BFA5' }}>Generasi Baru</span>
+          <span style={{ color: '#32ffd3', textShadow: '0 0 22px rgba(50,255,211,0.22)' }}>Generasi Baru</span>
         </h1>
-        <p style={{ fontSize: '1.05rem', color: '#64748b', lineHeight: 1.8, maxWidth: 420 }}>
+        <p style={{ fontSize: '1.05rem', color: '#8bb2c8', lineHeight: 1.8, maxWidth: 420 }}>
           Kelola keuangan Anda dengan aman, cepat, dan mudah. Transfer, bayar QRIS, dan pantau transaksi kapan saja.
         </p>
 
@@ -123,7 +124,7 @@ function LoginPage() {
           ].map(({ icon, label }) => (
             <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <span style={{ fontSize: '1.2rem' }}>{icon}</span>
-              <span style={{ color: '#64748b', fontSize: '0.9rem' }}>{label}</span>
+              <span style={{ color: '#8bb2c8', fontSize: '0.9rem' }}>{label}</span>
             </div>
           ))}
         </div>
@@ -139,17 +140,18 @@ function LoginPage() {
       }}>
         <div style={{
           width: '100%',
-          background: 'rgba(17, 34, 64, 0.9)',
-          border: '1px solid rgba(30, 58, 95, 0.7)',
-          borderRadius: 24,
+          background: 'linear-gradient(145deg, rgba(10, 24, 45, 0.92), rgba(5, 13, 28, 0.9))',
+          border: '1px solid rgba(50, 255, 211, 0.24)',
+          borderRadius: 18,
           padding: '40px',
           backdropFilter: 'blur(20px)',
+          boxShadow: '0 24px 80px rgba(0,0,0,0.42), 0 0 42px rgba(0,184,255,0.08)',
         }}>
           {/* Mode toggle */}
           <div style={{
             display: 'flex',
-            background: 'rgba(10, 22, 40, 0.6)',
-            borderRadius: 10,
+            background: 'rgba(3, 9, 21, 0.72)',
+            borderRadius: 8,
             padding: 4,
             marginBottom: 32,
           }}>
@@ -166,8 +168,8 @@ function LoginPage() {
                   fontWeight: 600,
                   fontSize: '0.9rem',
                   transition: 'all 0.2s',
-                  background: mode === m ? 'linear-gradient(135deg, #00BFA5, #00897B)' : 'transparent',
-                  color: mode === m ? 'white' : '#64748b',
+                  background: mode === m ? 'linear-gradient(135deg, #32ffd3, #00b8ff)' : 'transparent',
+                  color: mode === m ? '#03101b' : '#8bb2c8',
                   fontFamily: 'inherit',
                 }}
               >
@@ -176,7 +178,7 @@ function LoginPage() {
             ))}
           </div>
 
-          <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#e2e8f0', marginBottom: 24, marginTop: 0 }}>
+          <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#e8fff9', marginBottom: 24, marginTop: 0 }}>
             {mode === 'login' ? 'Selamat Datang' : 'Buat Akun Baru'}
           </h2>
 
@@ -234,7 +236,7 @@ function LoginPage() {
               </div>
             )}
             {success && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 14px', background: 'rgba(0, 191, 165, 0.1)', border: '1px solid rgba(0, 191, 165, 0.3)', borderRadius: 8, color: '#00BFA5', fontSize: '0.85rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 14px', background: 'rgba(50, 255, 211, 0.1)', border: '1px solid rgba(50, 255, 211, 0.3)', borderRadius: 8, color: '#32ffd3', fontSize: '0.85rem' }}>
                 <CheckCircle size={15} />
                 {success}
               </div>
@@ -245,8 +247,8 @@ function LoginPage() {
             </button>
           </form>
 
-          <p style={{ textAlign: 'center', fontSize: '0.8rem', color: '#4a6080', marginTop: 24, marginBottom: 0 }}>
-            Dengan masuk, Anda menyetujui <span style={{ color: '#00BFA5' }}>Syarat & Ketentuan</span> SIDIKBank.
+          <p style={{ textAlign: 'center', fontSize: '0.8rem', color: '#5d7e98', marginTop: 24, marginBottom: 0 }}>
+            Dengan masuk, Anda menyetujui <span style={{ color: '#32ffd3' }}>Syarat & Ketentuan</span> SIDIKBank.
           </p>
         </div>
       </div>

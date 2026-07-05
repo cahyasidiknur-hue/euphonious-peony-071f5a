@@ -31,12 +31,13 @@ export function BankingLayout({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#0a1628' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#050914' }}>
       {/* Sidebar */}
       <aside style={{
         width: 260,
-        background: 'rgba(17, 34, 64, 0.95)',
-        borderRight: '1px solid rgba(30, 58, 95, 0.6)',
+        background: 'linear-gradient(180deg, rgba(7, 18, 36, 0.98), rgba(4, 9, 22, 0.98))',
+        borderRight: '1px solid rgba(50, 255, 211, 0.18)',
+        boxShadow: '18px 0 70px rgba(0, 0, 0, 0.28)',
         display: 'flex',
         flexDirection: 'column',
         padding: '0 0 24px',
@@ -47,19 +48,20 @@ export function BankingLayout({ children }: { children: React.ReactNode }) {
         zIndex: 50,
       }}>
         {/* Logo */}
-        <div style={{ padding: '28px 24px 20px', borderBottom: '1px solid rgba(30, 58, 95, 0.4)' }}>
+        <div style={{ padding: '28px 24px 20px', borderBottom: '1px solid rgba(50, 255, 211, 0.14)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <div style={{
               width: 38, height: 38,
-              background: 'linear-gradient(135deg, #00BFA5, #1565C0)',
+              background: 'linear-gradient(135deg, #32ffd3, #00b8ff 62%, #7c5cff)',
               borderRadius: 10,
               display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: '0 0 24px rgba(50, 255, 211, 0.22)',
             }}>
-              <Landmark size={20} color="white" />
+              <Landmark size={20} color="#03101b" />
             </div>
             <div>
-              <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#e2e8f0', letterSpacing: '-0.3px' }}>SIDIK<span style={{ color: '#00BFA5' }}>Bank</span></div>
-              <div style={{ fontSize: '0.7rem', color: '#4a6080', letterSpacing: '0.5px' }}>DIGITAL BANKING</div>
+              <div style={{ fontFamily: 'Rajdhani, Manrope, sans-serif', fontSize: '1.24rem', fontWeight: 700, color: '#e8fff9' }}>SIDIK<span style={{ color: '#32ffd3' }}>Bank</span></div>
+              <div style={{ fontSize: '0.7rem', color: '#5d7e98', letterSpacing: '0.5px' }}>DIGITAL BANKING</div>
             </div>
           </div>
         </div>
@@ -79,22 +81,22 @@ export function BankingLayout({ children }: { children: React.ReactNode }) {
         </nav>
 
         {/* User + Logout */}
-        <div style={{ padding: '16px', borderTop: '1px solid rgba(30, 58, 95, 0.4)' }}>
+        <div style={{ padding: '16px', borderTop: '1px solid rgba(50, 255, 211, 0.14)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
             <div style={{
               width: 36, height: 36,
-              background: 'linear-gradient(135deg, #1565C0, #00BFA5)',
+              background: 'linear-gradient(135deg, #00b8ff, #32ffd3)',
               borderRadius: '50%',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: '0.85rem', fontWeight: 700, color: 'white',
+              fontSize: '0.85rem', fontWeight: 700, color: '#03101b',
             }}>
               {(user?.name || user?.email || 'U')[0].toUpperCase()}
             </div>
             <div style={{ overflow: 'hidden' }}>
-              <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#e2e8f0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#e8fff9', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {user?.name || 'User'}
               </div>
-              <div style={{ fontSize: '0.7rem', color: '#4a6080', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <div style={{ fontSize: '0.7rem', color: '#5d7e98', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {user?.email}
               </div>
             </div>
@@ -107,7 +109,7 @@ export function BankingLayout({ children }: { children: React.ReactNode }) {
       </aside>
 
       {/* Main content */}
-      <main style={{ marginLeft: 260, flex: 1, minHeight: '100vh', background: '#0a1628' }}>
+      <main style={{ marginLeft: 260, flex: 1, minHeight: '100vh', background: 'radial-gradient(circle at top right, rgba(0, 184, 255, 0.12), transparent 34%), #050914' }}>
         {children}
       </main>
     </div>
